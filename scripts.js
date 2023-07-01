@@ -55,7 +55,9 @@ function deleteTask(position) {
 
 function reloadTasks(){
     const tasksFromLocalStorage = localStorage.getItem('list')
+    if(tasksFromLocalStorage){
     myListOfTasks = JSON.parse(tasksFromLocalStorage)
+    }
     showTasks()
 }
 
